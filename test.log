@@ -1,0 +1,1368 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< io.github.benwhitehead.datastore:datastore-sandbox >---------
+[INFO] Building datastore-sandbox 0.1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ datastore-sandbox ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ datastore-sandbox ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ datastore-sandbox ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ datastore-sandbox ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/benwhitehead/src/sandbox/datastore/datastore-transaction-semantics-testing/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ datastore-sandbox ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/benwhitehead/src/sandbox/datastore/datastore-transaction-semantics-testing/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ datastore-sandbox ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running io.github.benwhitehead.datastore.TransactionReadSemanticTest
+[INFO] Running io.github.benwhitehead.datastore.TransactionReadSemanticTest$FirestoreInDatastoreMode
+2020-11-10 18:16:14,223 DEBUG [main  ] tionReadSemanticTest - {test} ds = com.google.cloud.datastore.DatastoreImpl@3bf9ce3e
+2020-11-10 18:16:14,258 DEBUG [main  ] tionReadSemanticTest - {test} Creating A...
+2020-11-10 18:16:14,367 DEBUG [main  ] io.grpc.Context      - {    } Storage override doesn't exist. Using default
+2020-11-10 18:16:14,594 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://oauth2.googleapis.com/token
+Accept-Encoding: gzip
+User-Agent: Google-HTTP-Java-Client/1.36.0 (gzip)
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Length: 813
+
+2020-11-10 18:16:14,594 INFO  [main  ] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'User-Agent: Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -d '@-' -- 'https://oauth2.googleapis.com/token' << $$$
+2020-11-10 18:16:14,744 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 813 bytes
+2020-11-10 18:16:14,747 INFO  [main  ] .a.c.h.HttpTransport - {    } grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=...
+2020-11-10 18:16:14,775 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Cache-Control: private
+Server: scaffolding on HTTPServer2
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Date: Tue, 10 Nov 2020 23:16:14 GMT
+Content-Type: application/json; charset=UTF-8
+
+2020-11-10 18:16:14,779 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 280 bytes
+2020-11-10 18:16:14,779 INFO  [main  ] .a.c.h.HttpTransport - {    } {"access_token":"...","expires_in":3599,"token_type":"Bearer"}
+2020-11-10 18:16:14,800 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 66
+
+2020-11-10 18:16:14,801 INFO  [main  ] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit' << $$$
+2020-11-10 18:16:14,843 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 66 bytes
+2020-11-10 18:16:14,844 INFO  [main  ] .a.c.h.HttpTransport - {    } ( 2>2<
+/
+   firestore-in-datastore-mode  
+ txTesting  A  
+ foo   
+
+2020-11-10 18:16:14,980 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:14 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:14,990 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 13 bytes
+2020-11-10 18:16:14,991 INFO  [main  ] .a.c.h.HttpTransport - {    }    �����   
+2020-11-10 18:16:15,005 DEBUG [main  ] tionReadSemanticTest - {test} Creating A complete (Entity{key=Key{projectId=firestore-in-datastore-mode, namespace=, path=[PathElement{kind=txTesting, id=null, name=A}]}, properties={foo=LongValue{valueType=LONG, excludeFromIndexes=false, meaning=0, value=10}}})
+2020-11-10 18:16:15,040 DEBUG [main  ] tionReadSemanticTest - {test} Awaiting transactions...
+2020-11-10 18:16:15,042 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:beginTransaction
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 4
+
+2020-11-10 18:16:15,042 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:beginTransaction
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 0
+
+2020-11-10 18:16:15,043 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:beginTransaction' << $$$
+2020-11-10 18:16:15,043 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:beginTransaction' << $$$
+2020-11-10 18:16:15,047 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } Total: 4 bytes
+2020-11-10 18:16:15,048 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } R   
+2020-11-10 18:16:15,100 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:15 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:15,105 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } Total: 102 bytes
+2020-11-10 18:16:15,105 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } 
+d  *�X"�l�"Y �� �}�+��#���R�v�ۃ[�Jg��� � �����y ᇢ����`j�Y/�q��4 1���T �q� �5 �z��JO@ � 󵥢Z  j�
+2020-11-10 18:16:15,111 DEBUG [tx-1-1] tionReadSemanticTest - { tx1} transactionId = *�X"�l�"Y ���}�+��#���R�v�ۃ[�Jg���������yᇢ����`j�Y/�q��41���T�q��5�z��JO@�	󵥢Zj�
+2020-11-10 18:16:15,112 DEBUG [tx-1-1] tionReadSemanticTest - { tx1} >>> runInTransaction
+2020-11-10 18:16:15,113 DEBUG [tx-1-1] tionReadSemanticTest - { tx1} tx1begin.countDown()
+2020-11-10 18:16:15,167 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:15 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:15,169 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } Total: 102 bytes
+2020-11-10 18:16:15,170 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } 
+d Ԛ 'W� t"Y �� �Q�� g�M�� ��k����ζx fO�Y��
+� FGs � �� S߳p .�jl��Hr�:�H�P� VMSx}� ;�]�V ��6*���
+2020-11-10 18:16:15,172 DEBUG [tx-1-2] tionReadSemanticTest - { tx2} transactionId = Ԛ'W�t"Y ���Q��g�M����k����ζx fO�Y��
+�FGs � �� S߳p.�jl��Hr�:�H�P�VMSx}�;�]�V��6*���
+2020-11-10 18:16:15,172 DEBUG [tx-1-2] tionReadSemanticTest - { tx2} >>> runInTransaction
+2020-11-10 18:16:15,173 DEBUG [tx-1-2] tionReadSemanticTest - { tx2} tx2begin.countDown()
+2020-11-10 18:16:15,180 DEBUG [tx-1-1] tionReadSemanticTest - { tx1} await(tx2begin) = true
+2020-11-10 18:16:15,196 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:lookup
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 153
+
+2020-11-10 18:16:15,196 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:lookup' << $$$
+2020-11-10 18:16:15,200 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } Total: 153 bytes
+2020-11-10 18:16:15,201 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } 
+f d  *�X"�l�"Y �� �}�+��#���R�v�ۃ[�Jg��� � �����y ᇢ����`j�Y/�q��4 1���T �q� �5 �z��JO@ � 󵥢Z  j� /
+   firestore-in-datastore-mode  
+ txTesting  A
+2020-11-10 18:16:15,351 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:15 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:15,374 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } Total: 73 bytes
+2020-11-10 18:16:15,375 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } 
+G
+<
+/
+   firestore-in-datastore-mode  
+ txTesting  A  
+ foo   
+ ����� 
+2020-11-10 18:16:15,382 DEBUG [tx-1-1] tionReadSemanticTest - { tx1} aa.foo = 10
+2020-11-10 18:16:15,383 DEBUG [tx-1-1] tionReadSemanticTest - { tx1} tx1Read1Complete.countDown()
+2020-11-10 18:16:15,383 DEBUG [tx-1-2] tionReadSemanticTest - { tx2} await(tx1Read1Complete) = true
+2020-11-10 18:16:15,387 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 66
+
+2020-11-10 18:16:15,388 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit' << $$$
+2020-11-10 18:16:15,395 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } Total: 66 bytes
+2020-11-10 18:16:15,397 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } ( 2>*<
+/
+   firestore-in-datastore-mode  
+ txTesting  A  
+ foo   *
+2020-11-10 18:16:15,487 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:15 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:15,489 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } Total: 13 bytes
+2020-11-10 18:16:15,489 INFO  [tx-1-2] .a.c.h.HttpTransport - {    }    �Ʒ���   
+2020-11-10 18:16:15,491 DEBUG [tx-1-2] tionReadSemanticTest - { tx2} tx2writeComplete.countDown()
+2020-11-10 18:16:15,492 DEBUG [tx-1-2] tionReadSemanticTest - { tx2} <<< runInTransaction
+2020-11-10 18:16:15,492 DEBUG [tx-1-1] tionReadSemanticTest - { tx1} await(tx2WriteComplete) = true
+2020-11-10 18:16:15,495 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:lookup
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 153
+
+2020-11-10 18:16:15,495 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 104
+
+2020-11-10 18:16:15,496 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:lookup' << $$$
+2020-11-10 18:16:15,497 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit' << $$$
+2020-11-10 18:16:15,501 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } Total: 153 bytes
+2020-11-10 18:16:15,502 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } Total: 104 bytes
+2020-11-10 18:16:15,503 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } 
+d Ԛ 'W� t"Y �� �Q�� g�M�� ��k����ζx fO�Y��
+� FGs � �� S߳p .�jl��Hr�:�H�P� VMSx}� ;�]�V ��6*���( 
+2020-11-10 18:16:15,503 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } 
+f d  *�X"�l�"Y �� �}�+��#���R�v�ۃ[�Jg��� � �����y ᇢ����`j�Y/�q��4 1���T �q� �5 �z��JO@ � 󵥢Z  j� /
+   firestore-in-datastore-mode  
+ txTesting  A
+2020-11-10 18:16:15,555 INFO  [tx-1-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Content-Disposition: attachment
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Length: 0
+Date: Tue, 10 Nov 2020 23:16:15 GMT
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:15,620 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:15 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:15,622 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } Total: 73 bytes
+2020-11-10 18:16:15,623 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } 
+G
+<
+/
+   firestore-in-datastore-mode  
+ txTesting  A  
+ foo   
+ ����� 
+2020-11-10 18:16:15,624 DEBUG [tx-1-1] tionReadSemanticTest - { tx1} aa.foo = 10
+2020-11-10 18:16:15,624 DEBUG [tx-1-1] tionReadSemanticTest - { tx1} tx1Read2Complete.countDown()
+2020-11-10 18:16:15,625 DEBUG [tx-1-1] tionReadSemanticTest - { tx1} <<< runInTransaction
+2020-11-10 18:16:15,627 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 104
+
+2020-11-10 18:16:15,627 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit' << $$$
+2020-11-10 18:16:15,632 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } Total: 104 bytes
+2020-11-10 18:16:15,633 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } 
+d  *�X"�l�"Y �� �}�+��#���R�v�ۃ[�Jg��� � �����y ᇢ����`j�Y/�q��4 1���T �q� �5 �z��JO@ � 󵥢Z  j�( 
+2020-11-10 18:16:15,765 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:15 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:15,773 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } Total: 9 bytes
+2020-11-10 18:16:15,774 INFO  [tx-1-1] .a.c.h.HttpTransport - {    } (�֯��� 
+2020-11-10 18:16:15,778 DEBUG [main  ] tionReadSemanticTest - {test} Awaiting transactions complete
+2020-11-10 18:16:15,834 DEBUG [main  ] tionReadSemanticTest - {test} ds = com.google.cloud.datastore.DatastoreImpl@44e3a2b2
+2020-11-10 18:16:15,834 DEBUG [main  ] tionReadSemanticTest - {test} Creating A...
+2020-11-10 18:16:15,844 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://oauth2.googleapis.com/token
+Accept-Encoding: gzip
+User-Agent: Google-HTTP-Java-Client/1.36.0 (gzip)
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Length: 813
+
+2020-11-10 18:16:15,844 INFO  [main  ] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'User-Agent: Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -d '@-' -- 'https://oauth2.googleapis.com/token' << $$$
+2020-11-10 18:16:15,847 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 813 bytes
+2020-11-10 18:16:15,847 INFO  [main  ] .a.c.h.HttpTransport - {    } grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=...
+2020-11-10 18:16:15,874 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Cache-Control: private
+Server: scaffolding on HTTPServer2
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Date: Tue, 10 Nov 2020 23:16:15 GMT
+Content-Type: application/json; charset=UTF-8
+
+2020-11-10 18:16:15,875 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 280 bytes
+2020-11-10 18:16:15,875 INFO  [main  ] .a.c.h.HttpTransport - {    } {"access_token":"...","expires_in":3599,"token_type":"Bearer"}
+2020-11-10 18:16:15,876 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 66
+
+2020-11-10 18:16:15,876 INFO  [main  ] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit' << $$$
+2020-11-10 18:16:15,878 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 66 bytes
+2020-11-10 18:16:15,878 INFO  [main  ] .a.c.h.HttpTransport - {    } ( 2>2<
+/
+   firestore-in-datastore-mode  
+ txTesting  A  
+ foo   
+
+2020-11-10 18:16:15,977 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:15 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:15,978 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 13 bytes
+2020-11-10 18:16:15,978 INFO  [main  ] .a.c.h.HttpTransport - {    }    ������   
+2020-11-10 18:16:15,978 DEBUG [main  ] tionReadSemanticTest - {test} Creating A complete (Entity{key=Key{projectId=firestore-in-datastore-mode, namespace=, path=[PathElement{kind=txTesting, id=null, name=A}]}, properties={foo=LongValue{valueType=LONG, excludeFromIndexes=false, meaning=0, value=10}}})
+2020-11-10 18:16:15,979 DEBUG [main  ] tionReadSemanticTest - {test} Awaiting transactions...
+2020-11-10 18:16:15,979 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:beginTransaction
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 0
+
+2020-11-10 18:16:15,979 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:beginTransaction
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 4
+
+2020-11-10 18:16:15,979 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:beginTransaction' << $$$
+2020-11-10 18:16:15,979 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:beginTransaction' << $$$
+2020-11-10 18:16:15,981 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } Total: 4 bytes
+2020-11-10 18:16:15,981 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } R 
+ 
+2020-11-10 18:16:16,031 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:16 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:16,031 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } Total: 102 bytes
+2020-11-10 18:16:16,031 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } 
+d ������f�"Y �� ���w��+��<1 ~[ �=̎���
+���3��R�L*�l  x�vD � ��f��g��y f f  :��� �G�� �1 G 5 (5����_�
+2020-11-10 18:16:16,031 DEBUG [tx-2-1] tionReadSemanticTest - { tx1} transactionId = ������f�"Y �����w��+��<1~[�=̎���
+���3��R�L*�lx�vD���f��g��yff:����G���1G5(5����_�
+2020-11-10 18:16:16,031 DEBUG [tx-2-1] tionReadSemanticTest - { tx1} >>> runInTransaction
+2020-11-10 18:16:16,032 DEBUG [tx-2-1] tionReadSemanticTest - { tx1} tx1begin.countDown()
+2020-11-10 18:16:16,032 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:16 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:16,033 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } Total: 102 bytes
+2020-11-10 18:16:16,033 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } 
+d �:" YG/�"Y �� ��R�p>) � s���>��q f�vz;�, ��Z���V�}C vWGt  ��kv□ ���]�ߪ .�:g� Cy�2j09�,k�{�¥mda�
+2020-11-10 18:16:16,033 DEBUG [tx-2-2] tionReadSemanticTest - { tx2} transactionId = �:"YG/�"Y ����R�p>) �s���>��qf�vz;�,��Z���V�}CvWGt��kv□���]�ߪ.�:g�Cy�2j09�,k�{�¥mda�
+2020-11-10 18:16:16,033 DEBUG [tx-2-2] tionReadSemanticTest - { tx2} >>> runInTransaction
+2020-11-10 18:16:16,033 DEBUG [tx-2-2] tionReadSemanticTest - { tx2} tx2begin.countDown()
+2020-11-10 18:16:16,033 DEBUG [tx-2-1] tionReadSemanticTest - { tx1} await(tx2begin) = true
+2020-11-10 18:16:16,034 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:lookup
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 153
+
+2020-11-10 18:16:16,034 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:lookup' << $$$
+2020-11-10 18:16:16,036 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } Total: 153 bytes
+2020-11-10 18:16:16,036 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } 
+f d ������f�"Y �� ���w��+��<1 ~[ �=̎���
+���3��R�L*�l  x�vD � ��f��g��y f f  :��� �G�� �1 G 5 (5����_� /
+   firestore-in-datastore-mode  
+ txTesting  A
+2020-11-10 18:16:16,087 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:16 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:16,088 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } Total: 73 bytes
+2020-11-10 18:16:16,088 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } 
+G
+<
+/
+   firestore-in-datastore-mode  
+ txTesting  A  
+ foo   
+ ������ 
+2020-11-10 18:16:16,088 DEBUG [tx-2-1] tionReadSemanticTest - { tx1} aa.foo = 10
+2020-11-10 18:16:16,088 DEBUG [tx-2-1] tionReadSemanticTest - { tx1} tx1Read1Complete.countDown()
+2020-11-10 18:16:16,088 DEBUG [tx-2-2] tionReadSemanticTest - { tx2} await(tx1Read1Complete) = true
+2020-11-10 18:16:16,089 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 66
+
+2020-11-10 18:16:16,089 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit' << $$$
+2020-11-10 18:16:16,091 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } Total: 66 bytes
+2020-11-10 18:16:16,091 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } ( 2>*<
+/
+   firestore-in-datastore-mode  
+ txTesting  A  
+ foo   *
+2020-11-10 18:16:21,093 DEBUG [tx-2-1] tionReadSemanticTest - { tx1} <<< runInTransaction
+2020-11-10 18:16:21,102 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:rollback
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 102
+
+2020-11-10 18:16:21,103 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:rollback' << $$$
+2020-11-10 18:16:21,126 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } Total: 102 bytes
+2020-11-10 18:16:21,127 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } 
+d ������f�"Y �� ���w��+��<1 ~[ �=̎���
+���3��R�L*�l  x�vD � ��f��g��y f f  :��� �G�� �1 G 5 (5����_�
+2020-11-10 18:16:21,312 INFO  [tx-2-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Content-Disposition: attachment
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Length: 0
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:21,319 ERROR [tx-2-1] .u.c.AggregateFuture - {    } Input Future failed with Error
+org.opentest4j.AssertionFailedError: Await timed out after 5 SECONDS ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:193)
+	at io.github.benwhitehead.datastore.TransactionReadSemanticTest.await(TransactionReadSemanticTest.java:150)
+	at io.github.benwhitehead.datastore.TransactionReadSemanticTest.lambda$null$1(TransactionReadSemanticTest.java:97)
+	at com.google.cloud.datastore.DatastoreImpl$ReadWriteTransactionCallable.call(DatastoreImpl.java:119)
+	at com.google.api.gax.retrying.DirectRetryingExecutor.submit(DirectRetryingExecutor.java:105)
+	at com.google.cloud.RetryHelper.run(RetryHelper.java:76)
+	at com.google.cloud.RetryHelper.runWithRetries(RetryHelper.java:50)
+	at com.google.cloud.datastore.DatastoreImpl.runInTransaction(DatastoreImpl.java:159)
+	at io.github.benwhitehead.datastore.TransactionReadSemanticTest.lambda$doTest$2(TransactionReadSemanticTest.java:81)
+	at com.google.common.util.concurrent.TrustedListenableFutureTask$TrustedFutureInterruptibleTask.runInterruptibly(TrustedListenableFutureTask.java:125)
+	at com.google.common.util.concurrent.InterruptibleTask.run(InterruptibleTask.java:69)
+	at com.google.common.util.concurrent.TrustedListenableFutureTask.run(TrustedListenableFutureTask.java:78)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.484 s <<< FAILURE! - in io.github.benwhitehead.datastore.TransactionReadSemanticTest$FirestoreInDatastoreMode
+[ERROR] io.github.benwhitehead.datastore.TransactionReadSemanticTest$FirestoreInDatastoreMode.runSimultaneousTransactions_tx1ReadWrite  Time elapsed: 5.494 s  <<< ERROR!
+java.util.concurrent.ExecutionException: org.opentest4j.AssertionFailedError: Await timed out after 5 SECONDS ==> expected: <true> but was: <false>
+Caused by: org.opentest4j.AssertionFailedError: Await timed out after 5 SECONDS ==> expected: <true> but was: <false>
+
+2020-11-10 18:16:21,352 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:21,353 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } Total: 13 bytes
+2020-11-10 18:16:21,353 INFO  [tx-2-2] .a.c.h.HttpTransport - {    }    ������   
+2020-11-10 18:16:21,354 DEBUG [tx-2-2] tionReadSemanticTest - { tx2} tx2writeComplete.countDown()
+2020-11-10 18:16:21,354 DEBUG [tx-2-2] tionReadSemanticTest - { tx2} <<< runInTransaction
+2020-11-10 18:16:21,355 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 104
+
+2020-11-10 18:16:21,355 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/firestore-in-datastore-mode:commit' << $$$
+[INFO] Running io.github.benwhitehead.datastore.TransactionReadSemanticTest$CloudDatastore
+2020-11-10 18:16:21,359 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } Total: 104 bytes
+2020-11-10 18:16:21,359 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } 
+d �:" YG/�"Y �� ��R�p>) � s���>��q f�vz;�, ��Z���V�}C vWGt  ��kv□ ���]�ߪ .�:g� Cy�2j09�,k�{�¥mda�( 
+2020-11-10 18:16:21,362 DEBUG [main  ] tionReadSemanticTest - {test} ds = com.google.cloud.datastore.DatastoreImpl@7966baa7
+2020-11-10 18:16:21,363 DEBUG [main  ] tionReadSemanticTest - {test} Creating A...
+2020-11-10 18:16:21,377 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://oauth2.googleapis.com/token
+Accept-Encoding: gzip
+User-Agent: Google-HTTP-Java-Client/1.36.0 (gzip)
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Length: 777
+
+2020-11-10 18:16:21,378 INFO  [main  ] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'User-Agent: Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -d '@-' -- 'https://oauth2.googleapis.com/token' << $$$
+2020-11-10 18:16:21,413 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 777 bytes
+2020-11-10 18:16:21,414 INFO  [main  ] .a.c.h.HttpTransport - {    } grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=...
+2020-11-10 18:16:21,415 INFO  [tx-2-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Content-Disposition: attachment
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Length: 0
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:21,438 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Cache-Control: private
+Server: scaffolding on HTTPServer2
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+Content-Type: application/json; charset=UTF-8
+
+2020-11-10 18:16:21,439 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 280 bytes
+2020-11-10 18:16:21,439 INFO  [main  ] .a.c.h.HttpTransport - {    } {"access_token":"...","expires_in":3599,"token_type":"Bearer"}
+2020-11-10 18:16:21,440 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 53
+
+2020-11-10 18:16:21,440 INFO  [main  ] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:commit' << $$$
+2020-11-10 18:16:21,442 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 53 bytes
+2020-11-10 18:16:21,442 INFO  [main  ] .a.c.h.HttpTransport - {    } ( 212/
+"
+   default-223119  
+ txTesting  A  
+ foo   
+
+2020-11-10 18:16:21,540 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:21,540 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 13 bytes
+2020-11-10 18:16:21,540 INFO  [main  ] .a.c.h.HttpTransport - {    }    ȃ����   
+2020-11-10 18:16:21,541 DEBUG [main  ] tionReadSemanticTest - {test} Creating A complete (Entity{key=Key{projectId=default-223119, namespace=, path=[PathElement{kind=txTesting, id=null, name=A}]}, properties={foo=LongValue{valueType=LONG, excludeFromIndexes=false, meaning=0, value=10}}})
+2020-11-10 18:16:21,541 DEBUG [main  ] tionReadSemanticTest - {test} Awaiting transactions...
+2020-11-10 18:16:21,542 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:beginTransaction
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 0
+
+2020-11-10 18:16:21,542 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:beginTransaction
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 4
+
+2020-11-10 18:16:21,542 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:beginTransaction' << $$$
+2020-11-10 18:16:21,542 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:beginTransaction' << $$$
+2020-11-10 18:16:21,544 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } Total: 4 bytes
+2020-11-10 18:16:21,545 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } R   
+2020-11-10 18:16:21,595 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:21,596 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } Total: 102 bytes
+2020-11-10 18:16:21,597 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } 
+d �C*  F�I"Y �� �   5�ϲ��eǞ��.�& �� � �8|�� �5�IC��6'#��0�p�M�׉Bq��勅Q��3�k�X��;�(��b z� �oV$�j�
+2020-11-10 18:16:21,599 DEBUG [tx-3-2] tionReadSemanticTest - { tx2} transactionId = �C*F�I"Y ���5�ϲ��eǞ��.�&����8|���5�IC��6'#��0�p�M�׉Bq��勅Q��3�k�X��;�(��bz��oV$�j�
+2020-11-10 18:16:21,600 DEBUG [tx-3-2] tionReadSemanticTest - { tx2} >>> runInTransaction
+2020-11-10 18:16:21,601 DEBUG [tx-3-2] tionReadSemanticTest - { tx2} tx2begin.countDown()
+2020-11-10 18:16:21,615 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:21,616 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } Total: 102 bytes
+2020-11-10 18:16:21,616 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } 
+d ߬ ����s"Y �� ���ʯa"
+݄�C(�� �Κ4>X�@ற�@����d�� �ãǃ�s��m� K  / :m�� G@d&�\�G~�� h���}�^ͭ��B
+2020-11-10 18:16:21,616 DEBUG [tx-3-1] tionReadSemanticTest - { tx1} transactionId = ߬����s"Y �����ʯa"
+݄�C(��	�Κ4>X�@ற�@����d���ãǃ�s��m�K/:m��G@d&�\�G~��h���}�^ͭ��B
+2020-11-10 18:16:21,616 DEBUG [tx-3-1] tionReadSemanticTest - { tx1} >>> runInTransaction
+2020-11-10 18:16:21,616 DEBUG [tx-3-1] tionReadSemanticTest - { tx1} tx1begin.countDown()
+2020-11-10 18:16:21,616 DEBUG [tx-3-1] tionReadSemanticTest - { tx1} await(tx2begin) = true
+2020-11-10 18:16:21,617 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:lookup
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 140
+
+2020-11-10 18:16:21,617 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:lookup' << $$$
+2020-11-10 18:16:21,619 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } Total: 140 bytes
+2020-11-10 18:16:21,619 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } 
+f d ߬ ����s"Y �� ���ʯa"
+݄�C(�� �Κ4>X�@ற�@����d�� �ãǃ�s��m� K  / :m�� G@d&�\�G~�� h���}�^ͭ��B "
+   default-223119  
+ txTesting  A
+2020-11-10 18:16:21,694 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:21,696 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } Total: 60 bytes
+2020-11-10 18:16:21,696 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } 
+:
+/
+"
+   default-223119  
+ txTesting  A  
+ foo   
+ ȃ���� 
+2020-11-10 18:16:21,697 DEBUG [tx-3-1] tionReadSemanticTest - { tx1} aa.foo = 10
+2020-11-10 18:16:21,698 DEBUG [tx-3-1] tionReadSemanticTest - { tx1} tx1Read1Complete.countDown()
+2020-11-10 18:16:21,698 DEBUG [tx-3-2] tionReadSemanticTest - { tx2} await(tx1Read1Complete) = true
+2020-11-10 18:16:21,700 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 53
+
+2020-11-10 18:16:21,700 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:commit' << $$$
+2020-11-10 18:16:21,704 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } Total: 53 bytes
+2020-11-10 18:16:21,704 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } ( 21*/
+"
+   default-223119  
+ txTesting  A  
+ foo   *
+2020-11-10 18:16:21,789 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:21,790 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } Total: 13 bytes
+2020-11-10 18:16:21,791 INFO  [tx-3-2] .a.c.h.HttpTransport - {    }    ������   
+2020-11-10 18:16:21,792 DEBUG [tx-3-2] tionReadSemanticTest - { tx2} tx2writeComplete.countDown()
+2020-11-10 18:16:21,792 DEBUG [tx-3-2] tionReadSemanticTest - { tx2} <<< runInTransaction
+2020-11-10 18:16:21,792 DEBUG [tx-3-1] tionReadSemanticTest - { tx1} await(tx2WriteComplete) = true
+2020-11-10 18:16:21,793 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 104
+
+2020-11-10 18:16:21,793 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:lookup
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 140
+
+2020-11-10 18:16:21,793 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:commit' << $$$
+2020-11-10 18:16:21,793 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:lookup' << $$$
+2020-11-10 18:16:21,796 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } Total: 104 bytes
+2020-11-10 18:16:21,796 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } Total: 140 bytes
+2020-11-10 18:16:21,796 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } 
+d �C*  F�I"Y �� �   5�ϲ��eǞ��.�& �� � �8|�� �5�IC��6'#��0�p�M�׉Bq��勅Q��3�k�X��;�(��b z� �oV$�j�( 
+2020-11-10 18:16:21,796 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } 
+f d ߬ ����s"Y �� ���ʯa"
+݄�C(�� �Κ4>X�@ற�@����d�� �ãǃ�s��m� K  / :m�� G@d&�\�G~�� h���}�^ͭ��B "
+   default-223119  
+ txTesting  A
+2020-11-10 18:16:21,840 INFO  [tx-3-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Content-Disposition: attachment
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Length: 0
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:21,840 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:21,841 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } Total: 60 bytes
+2020-11-10 18:16:21,841 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } 
+:
+/
+"
+   default-223119  
+ txTesting  A  
+ foo   
+ ȃ���� 
+2020-11-10 18:16:21,841 DEBUG [tx-3-1] tionReadSemanticTest - { tx1} aa.foo = 10
+2020-11-10 18:16:21,841 DEBUG [tx-3-1] tionReadSemanticTest - { tx1} tx1Read2Complete.countDown()
+2020-11-10 18:16:21,841 DEBUG [tx-3-1] tionReadSemanticTest - { tx1} <<< runInTransaction
+2020-11-10 18:16:21,842 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 104
+
+2020-11-10 18:16:21,842 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:commit' << $$$
+2020-11-10 18:16:21,843 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } Total: 104 bytes
+2020-11-10 18:16:21,843 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } 
+d ߬ ����s"Y �� ���ʯa"
+݄�C(�� �Κ4>X�@ற�@����d�� �ãǃ�s��m� K  / :m�� G@d&�\�G~�� h���}�^ͭ��B( 
+2020-11-10 18:16:21,889 INFO  [tx-3-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Content-Disposition: attachment
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Length: 0
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:21,889 DEBUG [main  ] tionReadSemanticTest - {test} Awaiting transactions complete
+2020-11-10 18:16:21,904 DEBUG [main  ] tionReadSemanticTest - {test} ds = com.google.cloud.datastore.DatastoreImpl@302a07d
+2020-11-10 18:16:21,905 DEBUG [main  ] tionReadSemanticTest - {test} Creating A...
+2020-11-10 18:16:21,914 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://oauth2.googleapis.com/token
+Accept-Encoding: gzip
+User-Agent: Google-HTTP-Java-Client/1.36.0 (gzip)
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Length: 777
+
+2020-11-10 18:16:21,914 INFO  [main  ] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'User-Agent: Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -d '@-' -- 'https://oauth2.googleapis.com/token' << $$$
+2020-11-10 18:16:21,920 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 777 bytes
+2020-11-10 18:16:21,921 INFO  [main  ] .a.c.h.HttpTransport - {    } grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=...
+2020-11-10 18:16:21,947 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Cache-Control: private
+Server: scaffolding on HTTPServer2
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Date: Tue, 10 Nov 2020 23:16:21 GMT
+Content-Type: application/json; charset=UTF-8
+
+2020-11-10 18:16:21,948 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 280 bytes
+2020-11-10 18:16:21,948 INFO  [main  ] .a.c.h.HttpTransport - {    } {"access_token":"...","expires_in":3599,"token_type":"Bearer"}
+2020-11-10 18:16:21,948 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 53
+
+2020-11-10 18:16:21,949 INFO  [main  ] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:commit' << $$$
+2020-11-10 18:16:21,955 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 53 bytes
+2020-11-10 18:16:21,956 INFO  [main  ] .a.c.h.HttpTransport - {    } ( 212/
+"
+   default-223119  
+ txTesting  A  
+ foo   
+
+2020-11-10 18:16:22,045 INFO  [main  ] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:22 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:22,046 INFO  [main  ] .a.c.h.HttpTransport - {    } Total: 13 bytes
+2020-11-10 18:16:22,046 INFO  [main  ] .a.c.h.HttpTransport - {    }    ������   
+2020-11-10 18:16:22,046 DEBUG [main  ] tionReadSemanticTest - {test} Creating A complete (Entity{key=Key{projectId=default-223119, namespace=, path=[PathElement{kind=txTesting, id=null, name=A}]}, properties={foo=LongValue{valueType=LONG, excludeFromIndexes=false, meaning=0, value=10}}})
+2020-11-10 18:16:22,046 DEBUG [main  ] tionReadSemanticTest - {test} Awaiting transactions...
+2020-11-10 18:16:22,047 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:beginTransaction
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 4
+
+2020-11-10 18:16:22,047 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:beginTransaction
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 0
+
+2020-11-10 18:16:22,047 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:beginTransaction' << $$$
+2020-11-10 18:16:22,047 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:beginTransaction' << $$$
+2020-11-10 18:16:22,050 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } Total: 4 bytes
+2020-11-10 18:16:22,051 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } R 
+ 
+2020-11-10 18:16:22,101 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:22 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:22,101 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } Total: 102 bytes
+2020-11-10 18:16:22,101 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } 
+d �~���;�U"Y �� �}[`L � �:�׶3�A�n� Fsf U�|�����;���e]� � tGt< ���W�ά�(ۄ�E ��b0  [ѐ } 9Z Eǃ ��
+2020-11-10 18:16:22,101 DEBUG [tx-4-1] tionReadSemanticTest - { tx1} transactionId = �~���;�U"Y ���}[`L��:�׶3�A�n�FsfU�|�����;���e]��tGt<���W�ά�(ۄ�E��b0[ѐ}9ZEǃ��
+2020-11-10 18:16:22,101 DEBUG [tx-4-1] tionReadSemanticTest - { tx1} >>> runInTransaction
+2020-11-10 18:16:22,101 DEBUG [tx-4-1] tionReadSemanticTest - { tx1} tx1begin.countDown()
+2020-11-10 18:16:22,102 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:22 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:22,102 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } Total: 102 bytes
+2020-11-10 18:16:22,102 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } 
+d ,�m3M�� "Y �� �e� �va�B�b�m�s(��ͺk ��/ ��'~�D��(����AhEgg�8LS��{� �T'�늖��ǅ��j�_����ݼZ."� 
+2020-11-10 18:16:22,102 DEBUG [tx-4-2] tionReadSemanticTest - { tx2} transactionId = ,�m3M��"Y ���e��va�B�b�m�s(��ͺk ��/��'~�D��(����AhEgg�8LS��{��T'�늖��ǅ��j�_����ݼZ."�
+2020-11-10 18:16:22,102 DEBUG [tx-4-2] tionReadSemanticTest - { tx2} >>> runInTransaction
+2020-11-10 18:16:22,102 DEBUG [tx-4-2] tionReadSemanticTest - { tx2} tx2begin.countDown()
+2020-11-10 18:16:22,102 DEBUG [tx-4-1] tionReadSemanticTest - { tx1} await(tx2begin) = true
+2020-11-10 18:16:22,103 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:lookup
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 140
+
+2020-11-10 18:16:22,103 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:lookup' << $$$
+2020-11-10 18:16:22,105 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } Total: 140 bytes
+2020-11-10 18:16:22,105 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } 
+f d �~���;�U"Y �� �}[`L � �:�׶3�A�n� Fsf U�|�����;���e]� � tGt< ���W�ά�(ۄ�E ��b0  [ѐ } 9Z Eǃ �� "
+   default-223119  
+ txTesting  A
+2020-11-10 18:16:22,160 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:22 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:22,161 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } Total: 60 bytes
+2020-11-10 18:16:22,161 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } 
+:
+/
+"
+   default-223119  
+ txTesting  A  
+ foo   
+ ������ 
+2020-11-10 18:16:22,162 DEBUG [tx-4-1] tionReadSemanticTest - { tx1} aa.foo = 10
+2020-11-10 18:16:22,163 DEBUG [tx-4-1] tionReadSemanticTest - { tx1} tx1Read1Complete.countDown()
+2020-11-10 18:16:22,163 DEBUG [tx-4-2] tionReadSemanticTest - { tx2} await(tx1Read1Complete) = true
+2020-11-10 18:16:22,166 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 53
+
+2020-11-10 18:16:22,167 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:commit' << $$$
+2020-11-10 18:16:22,171 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } Total: 53 bytes
+2020-11-10 18:16:22,172 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } ( 21*/
+"
+   default-223119  
+ txTesting  A  
+ foo   *
+2020-11-10 18:16:22,287 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:22 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:22,287 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } Total: 13 bytes
+2020-11-10 18:16:22,287 INFO  [tx-4-2] .a.c.h.HttpTransport - {    }    ������   
+2020-11-10 18:16:22,287 DEBUG [tx-4-2] tionReadSemanticTest - { tx2} tx2writeComplete.countDown()
+2020-11-10 18:16:22,287 DEBUG [tx-4-2] tionReadSemanticTest - { tx2} <<< runInTransaction
+2020-11-10 18:16:22,287 DEBUG [tx-4-1] tionReadSemanticTest - { tx1} await(tx2WriteComplete) = true
+2020-11-10 18:16:22,288 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 104
+
+2020-11-10 18:16:22,288 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:commit' << $$$
+2020-11-10 18:16:22,288 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:lookup
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 140
+
+2020-11-10 18:16:22,288 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:lookup' << $$$
+2020-11-10 18:16:22,289 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } Total: 104 bytes
+2020-11-10 18:16:22,289 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } Total: 140 bytes
+2020-11-10 18:16:22,289 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } 
+d ,�m3M�� "Y �� �e� �va�B�b�m�s(��ͺk ��/ ��'~�D��(����AhEgg�8LS��{� �T'�늖��ǅ��j�_����ݼZ."� ( 
+2020-11-10 18:16:22,290 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } 
+f d �~���;�U"Y �� �}[`L � �:�׶3�A�n� Fsf U�|�����;���e]� � tGt< ���W�ά�(ۄ�E ��b0  [ѐ } 9Z Eǃ �� "
+   default-223119  
+ txTesting  A
+2020-11-10 18:16:22,332 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Tue, 10 Nov 2020 23:16:22 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Disposition: attachment
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:22,333 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } Total: 60 bytes
+2020-11-10 18:16:22,333 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } 
+:
+/
+"
+   default-223119  
+ txTesting  A  
+ foo   
+ ������ 
+2020-11-10 18:16:22,334 DEBUG [tx-4-1] tionReadSemanticTest - { tx1} aa.foo = 10
+2020-11-10 18:16:22,335 DEBUG [tx-4-1] tionReadSemanticTest - { tx1} tx1Read2Complete.countDown()
+2020-11-10 18:16:22,335 DEBUG [tx-4-1] tionReadSemanticTest - { tx1} <<< runInTransaction
+2020-11-10 18:16:22,336 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } -------------- REQUEST  --------------
+POST https://datastore.googleapis.com/v1/projects/default-223119:commit
+Accept-Encoding: gzip
+Authorization: <Not Logged>
+User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)
+x-goog-api-format-version: 2
+x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2
+Content-Type: application/x-protobuf
+Content-Length: 104
+
+2020-11-10 18:16:22,336 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: <Not Logged>' -H 'User-Agent: gcloud-java/1.105.0 Google-HTTP-Java-Client/1.36.0 (gzip)' -H 'x-goog-api-format-version: 2' -H 'x-goog-api-client: gl-java/1.8.0_191 gccl/1.105.0 gax/1.58.2' -H 'Content-Type: application/x-protobuf' -d '@-' -- 'https://datastore.googleapis.com/v1/projects/default-223119:commit' << $$$
+2020-11-10 18:16:22,338 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } Total: 104 bytes
+2020-11-10 18:16:22,338 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } 
+d �~���;�U"Y �� �}[`L � �:�׶3�A�n� Fsf U�|�����;���e]� � tGt< ���W�ά�(ۄ�E ��b0  [ѐ } 9Z Eǃ ��( 
+2020-11-10 18:16:22,353 INFO  [tx-4-2] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Content-Disposition: attachment
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Length: 0
+Date: Tue, 10 Nov 2020 23:16:22 GMT
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:22,381 INFO  [tx-4-1] .a.c.h.HttpTransport - {    } -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Server: ESF
+X-Content-Type-Options: nosniff
+Content-Disposition: attachment
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Length: 0
+Date: Tue, 10 Nov 2020 23:16:22 GMT
+Content-Type: application/x-protobuf
+
+2020-11-10 18:16:22,381 DEBUG [main  ] tionReadSemanticTest - {test} Awaiting transactions complete
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.024 s - in io.github.benwhitehead.datastore.TransactionReadSemanticTest$CloudDatastore
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.539 s - in io.github.benwhitehead.datastore.TransactionReadSemanticTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TransactionReadSemanticTest$FirestoreInDatastoreMode>TransactionReadSemanticTest$TestCases.runSimultaneousTransactions_tx1ReadWrite:195 » Execution
+[INFO] 
+[ERROR] Tests run: 4, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.515 s
+[INFO] Finished at: 2020-11-10T18:16:22-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5:test (default-test) on project datastore-sandbox: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/benwhitehead/src/sandbox/datastore/datastore-transaction-semantics-testing/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
